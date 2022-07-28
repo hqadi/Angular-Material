@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { map, startWith } from 'rxjs/operators'
 
@@ -17,6 +17,12 @@ export class AppComponent implements OnInit {
     fontStyle = '';
     fontStyleControl = new FormControl('');
     longText = 'text text text text text text text text text text text text';
+    range = new FormGroup({
+        start: new FormControl(),
+        end: new FormControl(),
+    });
+    date = new Date();
+    vertical = true;
 
     ngOnInit(): void {
         this.filteredOptions = this.nameControl.valueChanges.pipe(

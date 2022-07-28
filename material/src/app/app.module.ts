@@ -16,10 +16,22 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CheckboxesComponent } from './checkboxes/checkboxes.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { ExpansionPanelsComponent } from './expansion-panels/expansion-panels.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormInputsComponent } from './mat-form-inputs/mat-form-inputs.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        CheckboxesComponent,
+        ExpansionPanelsComponent,
+        MatFormInputsComponent
     ],
     imports: [
         BrowserModule,
@@ -38,6 +50,12 @@ import { MatDividerModule } from '@angular/material/divider';
         MatCardModule,
         MatProgressBarModule,
         MatDividerModule,
+        MatCheckboxModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatExpansionModule,
+        MatSelectModule,
+        MatRadioModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

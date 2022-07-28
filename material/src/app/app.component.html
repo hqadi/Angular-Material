@@ -194,7 +194,7 @@
   </mat-card-actions>
 </mat-card> -->
 
-<mat-card class="example-card">
+<!-- <mat-card class="example-card">
   <mat-card-subtitle>This is a subtitle</mat-card-subtitle>
   <mat-card-title>This is a title</mat-card-title>
   <mat-card-content>{{ longText }}</mat-card-content>
@@ -206,4 +206,41 @@
   <mat-card-footer>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </mat-card-footer>
-</mat-card>
+</mat-card> -->
+
+<!-- <app-checkboxes></app-checkboxes> -->
+
+<!-- <mat-form-field>
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="datepicker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="datepicker">
+    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+  </mat-datepicker-toggle>
+  <mat-datepicker #datepicker></mat-datepicker>
+</mat-form-field>
+<br>
+<mat-form-field>
+  <mat-label>Choose a range of dates</mat-label>
+  <mat-date-range-input [rangePicker]="picker" [formGroup]="range">
+    <input matStartDate formControlName="start" placeholder="Start Date">
+    <input matEndDate formControlName="end" placeholder="EndDate">
+  </mat-date-range-input>
+  <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>
+<mat-divider></mat-divider>
+<br>
+{{ range.value | json }}
+<br>
+<div *ngIf="range.controls.start.value">
+  {{ range.controls.start.value | date }}
+</div>
+<button mat-raised-button (click)="vertical = !vertical">Click me!</button>
+<div style="margin:5rem">
+  <mat-divider [vertical]="vertical" [style.height]="vertical ? '100px': ''"></mat-divider>
+</div> -->
+<!-- <app-expansion-panels></app-expansion-panels> -->
+
+<app-mat-form-inputs></app-mat-form-inputs>

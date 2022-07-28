@@ -1,0 +1,59 @@
+<!-- <form [formGroup]="optionsFormGroup">
+    <mat-checkbox formControlName="hideRequiredControl">Hide Required Marker</mat-checkbox>
+    <br> <br>
+    <div>
+        <label>Float Label:</label>
+        <mat-radio-group formControlName="floatLabelControl">
+            <mat-radio-button value="auto">Auto</mat-radio-button>
+            <mat-radio-button value="always">Always</mat-radio-button>
+        </mat-radio-group>
+    </div>
+</form>
+<br>
+<mat-form-field 
+    appearance="fill" 
+    [hideRequiredMarker]="optionsFormGroup.controls?.hideRequiredControl?.value" 
+    [floatLabel]="optionsFormGroup.controls?.floatLabelControl?.value || 'auto'"
+>
+    <mat-label>Name</mat-label>
+    <input matInput required placeholder="name">
+</mat-form-field>
+<br>
+<mat-form-field 
+    appearance="fill"
+    [floatLabel]="optionsFormGroup.controls?.floatLabelControl?.value || 'auto'"
+>
+    <mat-label>Select an option</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let option of options" [value]="option">{{ option }}</mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field 
+    appearance="fill"
+    [hideRequiredMarker]="optionsFormGroup.controls?.hideRequiredControl?.value"
+    [floatLabel]="optionsFormGroup.controls?.floatLabelControl?.value || 'auto'"
+>
+    <mat-label>TextArea</mat-label>
+    <textarea matInput required></textarea>
+</mat-form-field> -->
+
+<mat-form-field hintLabel="Max 10 characters" color="warn">
+    <mat-label>Enter some input</mat-label>
+    <input matInput maxlength="10" [formControl]="someControl">
+    <mat-hint align="end">{{ someControl.value?.length || 0 }} / 10</mat-hint>
+    <mat-error>Required</mat-error>
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select>
+        <mat-option>Option</mat-option>
+    </mat-select>
+    <span matSuffix>suffix</span>
+    <span matPrefix>prefix</span>
+    <mat-hint align="end">end hint</mat-hint>
+    <mat-hint align="start">start hint</mat-hint>
+</mat-form-field>
+
+<mat-icon class="mat-icon-rtl-mirror">thumb_up</mat-icon>
